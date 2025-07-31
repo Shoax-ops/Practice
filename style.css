@@ -6,6 +6,7 @@ body {
   height: 100vh;
   font-family: "Segoe UI", sans-serif;
   margin: 0;
+  overflow: hidden;
 }
 
 .container {
@@ -14,6 +15,8 @@ body {
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
 }
 
 h1 {
@@ -31,3 +34,62 @@ h2 {
   font-size: 2rem;
   color: #e63946;
 }
+
+/* Floating Hearts */
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;       /* full viewport width */
+  height: 100vh;      /* full viewport height */
+  pointer-events: none;
+  overflow: visible;  /* allow hearts to float outside container */
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #ff6b81;
+  transform: rotate(45deg);
+  animation: floatHearts 10s infinite ease-in-out;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #ff6b81;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -12.5px;
+  left: 0;
+}
+
+.heart::after {
+  left: -12.5px;
+  top: 0;
+}
+
+@keyframes floatHearts {
+  0% {
+    transform: translateY(100vh) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Horizontal positions and delays */
+.heart:nth-child(1) { left: 15%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 35%; animation-delay: 2s; }
+.heart:nth-child(3) { left: 55%; animation-delay: 4s; }
+.heart:nth-child(4) { left: 75%; animation-delay: 1s; }
+.heart:nth-child(5) { left: 90%; animation-delay: 3s; }

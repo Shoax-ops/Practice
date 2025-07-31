@@ -2,15 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>For You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>For Amber</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Hi Amber,</h1>
+    <h1>Hey Amber,</h1>
     <p>I just wanted to say...</p>
-    <h2>I know you look beautiful today 💖(Romans 8v38)</h2>
+    <h2>I know you look beautiful today 💖(1 John 4v7-21)</h2>
   </div>
+
+  <!-- Floating Hearts -->
+  <div class="hearts">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="favSong.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const music = document.getElementById("bgMusic");
+    document.addEventListener("click", () => {
+      music.play();
+    });
+  </script>
 </body>
 </html>
