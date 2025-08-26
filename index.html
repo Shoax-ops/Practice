@@ -10,10 +10,10 @@
   <div class="main-container">
     <!-- Sidebar buttons -->
     <div class="sidebar">
-      <button onclick="showMessage('Neo')">Neo</button>
-      <button onclick="showMessage('Cleo')">Cleo</button>
-      <button onclick="showMessage('Immanuel')">Immanuel</button>
-      <!-- Add more buttons here for all 20 senders -->
+      <button onclick="showMessage('Neo', this)">Neo</button>
+      <button onclick="showMessage('Cleo', this)">Cleo</button>
+      <button onclick="showMessage('Immanuel', this)">Immanuel</button>
+      <!-- Add more buttons for all 20 senders here -->
     </div>
 
     <!-- Main content -->
@@ -54,15 +54,25 @@
     const music = document.getElementById("bgMusic");
     document.addEventListener("click", () => music.play());
 
-    // Show/hide messages
-    function showMessage(sender) {
+    const sidebarButtons = document.querySelectorAll('.sidebar button');
+
+    function showMessage(sender, button) {
+      // Hide all messages
       const allMessages = document.querySelectorAll(".message");
       allMessages.forEach(msg => msg.style.display = "none");
+
+      // Show selected message
       document.getElementById(sender).style.display = "block";
+
+      // Remove active class from all buttons
+      sidebarButtons.forEach(btn => btn.classList.remove('active'));
+
+      // Add active class to the clicked button
+      button.classList.add('active');
     }
 
     // Start with Neo's message
-    showMessage('Neo');
+    showMessage('Neo', sidebarButtons[0]);
   </script>
 </body>
 </html>

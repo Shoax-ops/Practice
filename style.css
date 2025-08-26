@@ -24,27 +24,34 @@ body {
 
 /* Sidebar buttons */
 .sidebar {
-  width: 150px;
+  width: 200px;  /* wider for bigger buttons */
   background-color: #ffd166;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;   /* spacing between buttons */
   overflow-y: auto; /* scrollable if many buttons */
 }
 
 .sidebar button {
-  padding: 0.5rem;
-  border-radius: 8px;
+  padding: 1rem;           /* bigger clickable area */
+  font-size: 1.5rem;       /* ~3x bigger than original */
+  border-radius: 10px;
   border: none;
   background-color: #f4a261;
   cursor: pointer;
   font-weight: bold;
   text-align: left;
+  transition: background 0.3s;
 }
 
 .sidebar button:hover {
   background-color: #e76f51;
+}
+
+.sidebar button.active {
+  background-color: #ff6b81;
+  color: #fff;
 }
 
 /* Content area */
