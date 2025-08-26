@@ -9,64 +9,69 @@ body {
   align-items: center;
 }
 
-.container {
-  background: rgba(255,255,255,0.95);
-  padding: 1.5rem;
-  border-radius: 20px;
-  text-align: center;
-  z-index: 1;
-  position: relative;
+/* Main layout: sidebar + content */
+.main-container {
+  display: flex;
   width: 90%;
-  max-width: 700px;
-  max-height: 90vh;
+  max-width: 900px;
+  height: 90vh;
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sidebar buttons */
+.sidebar {
+  width: 150px;
+  background-color: #ffd166;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-}
-
-h1 {
-  color: #ff6b81;
-}
-
-/* Scrollable buttons */
-.buttons-scroll {
-  overflow-x: auto;
-  margin: 1rem 0;
-}
-
-.buttons {
-  display: flex;
   gap: 0.5rem;
+  overflow-y: auto; /* scrollable if many buttons */
 }
 
-.buttons button {
-  flex: 0 0 auto; /* prevent shrinking */
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
+.sidebar button {
+  padding: 0.5rem;
+  border-radius: 8px;
   border: none;
-  background-color: #ffd166;
+  background-color: #f4a261;
   cursor: pointer;
   font-weight: bold;
+  text-align: left;
 }
 
-.buttons button:hover {
-  background-color: #f4a261;
+.sidebar button:hover {
+  background-color: #e76f51;
 }
 
-/* Scrollable message area */
+/* Content area */
+.content {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Scrollable messages */
 .messages-scroll {
   overflow-y: auto;
   flex: 1;
-  padding: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
   border-top: 1px solid #ccc;
-  border-radius: 10px;
+  padding-top: 1rem;
 }
 
 .messages .message {
   display: none;
   font-size: 1.1rem;
   color: #333;
-  text-align: left;
   line-height: 1.5;
+  text-align: left;
 }
 
 /* Floating Balloons */
