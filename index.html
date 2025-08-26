@@ -1,38 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>For Amber</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For River</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Chetty Boi,</h1>
-    <p>I just wanted to say.....</p>
-    <h2>Happy birthday</h2>
+    <h1>Happy Birthday, River!</h1>
+    
+    <!-- Scrollable sender buttons -->
+    <div class="buttons-scroll">
+      <div class="buttons">
+        <button onclick="showMessage('Neo')">Neo</button>
+        <button onclick="showMessage('Cleo')">Cleo</button>
+        <button onclick="showMessage('Immanuel')">Immanuel</button>
+        <!-- Add more buttons for all 20 senders here -->
+      </div>
+    </div>
+
+    <!-- Scrollable messages -->
+    <div class="messages-scroll">
+      <div class="messages">
+        <div class="message" id="Neo">
+          <p>Hey River! Wishing you an amazing birthday. 🎉 Love, Neo</p>
+        </div>
+        <div class="message" id="Cleo">
+          <p>River, may your day be full of joy and laughter! 💖 Cleo</p>
+        </div>
+        <div class="message" id="Immanuel">
+          <p>Happy Birthday, River! 🎂 Stay blessed. - Immanuel</p>
+        </div>
+        <!-- Add more messages here -->
+      </div>
+    </div>
   </div>
 
-  <!-- Floating Hearts -->
-  <div class="hearts">
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
+  <!-- Floating Balloons -->
+  <div class="balloons">
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
   </div>
 
   <!-- Background Music -->
   <audio id="bgMusic" autoplay loop>
     <source src="favSong.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
   </audio>
 
   <script>
     const music = document.getElementById("bgMusic");
-    document.addEventListener("click", () => {
-      music.play();
-    });
+    document.addEventListener("click", () => music.play());
+
+    // Show/hide messages
+    function showMessage(sender) {
+      const allMessages = document.querySelectorAll(".message");
+      allMessages.forEach(msg => msg.style.display = "none");
+      document.getElementById(sender).style.display = "block";
+    }
+
+    // Start with Neo's message
+    showMessage('Neo');
   </script>
 </body>
 </html>
