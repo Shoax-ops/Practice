@@ -7,31 +7,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="main-container">
-    <!-- Sidebar buttons -->
-    <div class="sidebar">
-      <button onclick="showMessage('Neo', this)">Neo</button>
-      <button onclick="showMessage('Cleo', this)">Cleo</button>
-      <button onclick="showMessage('Immanuel', this)">Immanuel</button>
-      <!-- Add more buttons for all 20 senders here -->
-    </div>
+  <!-- Sidebar fixed to top-left -->
+  <div class="sidebar">
+    <button onclick="showMessage('Neo', this)">Neo</button>
+    <button onclick="showMessage('Cleo', this)">Cleo</button>
+    <button onclick="showMessage('Immanuel', this)">Immanuel</button>
+    <!-- Add more buttons for all 20 senders -->
+  </div>
 
-    <!-- Main content -->
-    <div class="content">
-      <h1>Happy Birthday, River!</h1>
-      <div class="messages-scroll">
-        <div class="messages">
-          <div class="message" id="Neo">
-            <p>Hey River! Wishing you an amazing birthday. 🎉 Love, Neo</p>
-          </div>
-          <div class="message" id="Cleo">
-            <p>River, may your day be full of joy and laughter! 💖 Cleo</p>
-          </div>
-          <div class="message" id="Immanuel">
-            <p>Happy Birthday, River! 🎂 Stay blessed. - Immanuel</p>
-          </div>
-          <!-- Add more messages here -->
+  <!-- Centered main content -->
+  <div class="content">
+    <h1>Happy Birthday, River!</h1>
+    <div class="messages-scroll">
+      <div class="messages">
+        <div class="message" id="Neo">
+          <p>Hey River! Wishing you an amazing birthday. 🎉 Love, Neo</p>
         </div>
+        <div class="message" id="Cleo">
+          <p>River, may your day be full of joy and laughter! 💖 Cleo</p>
+        </div>
+        <div class="message" id="Immanuel">
+          <p>Happy Birthday, River! 🎂 Stay blessed. - Immanuel</p>
+        </div>
+        <!-- Add more messages here -->
       </div>
     </div>
   </div>
