@@ -3,39 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For River</title>
+  <title>For Avuswa & Precious</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Sidebar fixed to top-left -->
-  <div class="sidebar">
-    <button onclick="showMessage('Neo', this)">Neo</button>
-    <button onclick="showMessage('Cleo', this)">Cleo</button>
-    <button onclick="showMessage('Immanuel', this)">Immanuel</button>
-    <!-- Add more buttons for all 20 senders -->
-  </div>
-
   <!-- Centered main content -->
   <div class="content">
-    <h1>Happy Birthday, River!</h1>
+    <h1>Happy 20th Birthday, Avuswa & Precious!</h1>
     <div class="messages-scroll">
       <div class="messages">
-        <div class="message" id="Neo">
-          <p>I don’t even know where to begin, because you’ve been more than just a roommate to me — you’ve truly been a brother in every sense of the word. Through the good days and the tough ones, you’ve been someone I can lean on. You’ve reminded me what true friendship and brotherhood in Christ look like.
+        <div class="message" id="main-message">
+          <p>Dear Avuswa and Precious,  
 
-Even though I’m older than you, you’ve given me wisdom and advice at times I needed it most. I thank God for placing you in my life, not just as someone I share a room with, but as a brother I can count on, trust, laugh with, pray with, and grow with.
+Today is such a beautiful and special day, because it marks the beginning of a new chapter in your lives — your twenties! Stepping into this season is more than just celebrating another year; it’s stepping into womanhood with greater purpose, grace, and strength.  
 
-On this special day, I pray that God continues to bless you, guide you, and use you mightily. May He grant you joy, strength, peace, and favor in everything you do. I know your future is bright, and I’m honored to be part of your journey.
+You are both radiant, gifted, and filled with so much potential. My prayer is that this year brings you closer to God’s heart, that you may always walk in His light, and that His blessings may overflow in every area of your lives. May your twenties be a decade of growth, discovery, love, joy, and endless victories.  
 
-Enjoy your day, bro — you deserve it. Here’s to many more years of brotherhood, growth, and blessings together.</p>
+As you journey ahead, may you rise to every challenge with courage, and embrace every blessing with gratitude. May your hearts always remain soft, your dreams always remain big, and your faith always remain unshaken.  
+
+Avuswa and Precious, you are deeply loved and celebrated today. I’m so proud of the women you’re becoming, and I can’t wait to see how brightly you’ll shine. May this birthday be just the beginning of countless beautiful moments, breakthroughs, and testimonies in your lives.  
+
+Happy Birthday, young queens 🎉👑 May your twenties be unforgettable and full of grace!  
+</p>
         </div>
-        <div class="message" id="Cleo">
-          <p>River, may your day be full of joy and laughter! 💖 Cleo</p>
-        </div>
-        <div class="message" id="Immanuel">
-          <p>Happy Birthday, River! 🎂 Stay blessed. - Immanuel</p>
-        </div>
-        <!-- Add more messages here -->
       </div>
     </div>
   </div>
@@ -57,26 +47,6 @@ Enjoy your day, bro — you deserve it. Here’s to many more years of brotherho
   <script>
     const music = document.getElementById("bgMusic");
     document.addEventListener("click", () => music.play());
-
-    const sidebarButtons = document.querySelectorAll('.sidebar button');
-
-    function showMessage(sender, button) {
-      // Hide all messages
-      const allMessages = document.querySelectorAll(".message");
-      allMessages.forEach(msg => msg.style.display = "none");
-
-      // Show selected message
-      document.getElementById(sender).style.display = "block";
-
-      // Remove active class from all buttons
-      sidebarButtons.forEach(btn => btn.classList.remove('active'));
-
-      // Add active class to the clicked button
-      button.classList.add('active');
-    }
-
-    // Start with Neo's message
-    showMessage('Neo', sidebarButtons[0]);
   </script>
 </body>
 </html>
